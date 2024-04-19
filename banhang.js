@@ -121,7 +121,30 @@ listItem.forEach((el, index) => {
   div.appendChild(h1);
   div.appendChild(priceContainer);
   div.appendChild(p);
+
+  const icon = document.createElement("i");
+  icon.className = "bx bx-cart-add";
+  icon.style.position = "absolute";
+  icon.style.right = "25px";
+  icon.style.bottom = "20px";
+  icon.style.fontSize = "30px";
+  icon.style.transition = "transform 0.3s ease";
+  icon.style.color = "orange";
+  icon.style.cursor = "pointer";
+  div.style.position = "relative";
+  div.appendChild(icon);
+
   itemEl.appendChild(div);
+
+  icon.addEventListener("mouseover", () => {
+    icon.style.color = "red";
+    icon.style.transform = "scale(1.3)";
+  });
+
+  icon.addEventListener("mouseout", () => {
+    icon.style.color = "orange";
+    icon.style.transform = "none";
+  });
 
   div.addEventListener("mouseover", () => {
     div.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
