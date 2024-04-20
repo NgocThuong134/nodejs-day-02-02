@@ -87,7 +87,7 @@ listItem.forEach((el, index) => {
   });
   originalPrice.style.textDecoration = "line-through";
   originalPrice.style.color = "gray";
-  originalPrice.style.fontSize = "17px";
+  originalPrice.style.fontSize = "13px";
   priceContainer.appendChild(originalPrice);
 
   const discountedPriceSpan = document.createElement("span");
@@ -107,6 +107,7 @@ listItem.forEach((el, index) => {
   discountPercent.style.padding = "2px 3px";
   discountPercent.style.borderRadius = "50%";
   discountPercent.style.fontWeight = "bold";
+  discountPercent.style.fontSize = "14px";
   priceContainer.appendChild(discountPercent);
 
   const p = document.createElement("p");
@@ -133,6 +134,10 @@ listItem.forEach((el, index) => {
   icon.style.transition = "transform 0.3s ease";
   icon.style.color = "orange";
   icon.style.cursor = "pointer";
+  icon.style.padding = "5px";
+  icon.style.backgroundColor = "white";
+  icon.style.borderRadius = "50%";
+  icon.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
   div.style.position = "relative";
   div.appendChild(icon);
 
@@ -151,10 +156,9 @@ listItem.forEach((el, index) => {
   icon.addEventListener("click", () => {
     alert("Đã thêm vào giỏ hàng!");
   });
-  
   div.addEventListener("mouseover", () => {
     div.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
-    div.style.transform = "scale(1.05)";
+    div.style.transform = "scale(1.03)";
   });
 
   div.addEventListener("mouseout", () => {
