@@ -148,6 +148,10 @@ listItem.forEach((el, index) => {
     icon.style.transform = "none";
   });
 
+  icon.addEventListener("click", () => {
+    alert("Đã thêm vào giỏ hàng!");
+  });
+  
   div.addEventListener("mouseover", () => {
     div.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
     div.style.transform = "scale(1.05)";
