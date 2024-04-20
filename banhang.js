@@ -77,7 +77,9 @@ listItem.forEach((el, index) => {
   const discount = el.price * (el.disprice / 100);
   const discountedPrice = price - discount;
   const priceContainer = document.createElement("div");
-
+  priceContainer.style.display = "flex";
+  priceContainer.style.alignItems = "center";
+  priceContainer.style.gap = "5px";
   const originalPrice = document.createElement("span");
   originalPrice.innerText = price.toLocaleString("vi-VN", {
     style: "currency",
@@ -102,7 +104,7 @@ listItem.forEach((el, index) => {
   discountPercent.innerHTML = `<i class='bx bx-down-arrow-alt'></i>${el.disprice}%`;
   discountPercent.style.backgroundColor = "red";
   discountPercent.style.color = "white";
-  discountPercent.style.padding = "2px ";
+  discountPercent.style.padding = "2px 3px";
   discountPercent.style.borderRadius = "50%";
   discountPercent.style.fontWeight = "bold";
   priceContainer.appendChild(discountPercent);
@@ -111,7 +113,7 @@ listItem.forEach((el, index) => {
   p.innerText = el.description;
 
   const div = document.createElement("div");
-  div.style.backgroundColor = "#ececec";
+  div.style.backgroundColor = "#f5f5f5";
   div.style.display = "flex";
   div.style.flexDirection = "column";
   div.style.padding = "10px 15px";
@@ -138,7 +140,7 @@ listItem.forEach((el, index) => {
 
   icon.addEventListener("mouseover", () => {
     icon.style.color = "red";
-    icon.style.transform = "scale(1.3)";
+    icon.style.transform = "scale(1.4)";
   });
 
   icon.addEventListener("mouseout", () => {
@@ -148,7 +150,7 @@ listItem.forEach((el, index) => {
 
   div.addEventListener("mouseover", () => {
     div.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
-    div.style.transform = "scale(1.1)";
+    div.style.transform = "scale(1.05)";
   });
 
   div.addEventListener("mouseout", () => {
