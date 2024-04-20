@@ -1,1 +1,1 @@
-# nodejs-day-02-02
+This is my nodejs day 02-02 about detail products
